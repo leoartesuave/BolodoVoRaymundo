@@ -1,0 +1,43 @@
+<ion-header [translucent]="true" >
+
+  <!-- A proriedade color define as cores com base no arquivo variable.scss -->
+  <!-- a propriedade mode altera o mode de exibição -->
+  <ion-toolbar color="dark" mode="ios">
+    <ion-title>
+      {{titulo}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h1 style="text-align: center;">Produtos</h1>
+  <ion-list>
+    <ion-item-sliding *ngFor="let bolos of receitas">
+      <ion-item>
+        <ion-avatar>
+          <ion-img [src]="bolos.img"></ion-img>
+        </ion-avatar>
+        
+        <ion-label>{{bolos.titulo}} </ion-label>
+        
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-fab horizontal="start" vertical="bottom">
+    <ion-fab-button routerLink='/conta'>
+      <ion-icon name="login">
+  
+      </ion-icon>
+    </ion-fab-button>
+   </ion-fab>
+
+ <ion-fab horizontal="end" vertical="bottom">
+  <ion-fab-button routerLink='/add-bolo'>
+    <ion-icon name="add">
+
+    </ion-icon>
+  </ion-fab-button>
+ </ion-fab>
+
+</ion-content>

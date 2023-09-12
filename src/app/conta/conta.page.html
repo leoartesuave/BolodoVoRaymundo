@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark" mode="ios">
+    <ion-title>conta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <form [formGroup]="form" (submit)="login()">
+    <ion-item>
+      <ion-label></ion-label>
+      <ion-input type="text" formControlName="email" class="form-control" placeholder="Email"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label></ion-label>
+      <ion-input type="password" formControlName="senha" class="form-control" placeholder="Senha"></ion-input>
+    </ion-item>
+    <ion-item>
+
+
+      <ion-button color="primary" type="submit" >login</ion-button>
+      <ion-button color="secondary">cadastrar</ion-button>
+
+    </ion-item>
+  </form>
+
+</ion-content>

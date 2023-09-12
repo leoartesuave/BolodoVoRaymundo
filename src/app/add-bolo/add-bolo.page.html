@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar mode="ios" color="dark">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>addBolo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form [formGroup]="form" (submit)="enviar()">
+   
+    <ion-item>
+      <ion-label position="floating">Titulo da receita:</ion-label>
+      <ion-input type="text" formControlName="titulo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Imagem:</ion-label>
+      <ion-input type="url" formControlName="img"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">ingredientes:</ion-label>
+      <ion-input type="text" formControlName="ing"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Modo de Preparo:</ion-label>
+      <ion-input type="text" formControlName="prep"></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" >{{nameButton}}</ion-button>
+
+  </form>
+</ion-content>
