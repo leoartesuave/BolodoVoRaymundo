@@ -1,43 +1,27 @@
-<ion-header [translucent]="true" >
-
-  <!-- A proriedade color define as cores com base no arquivo variable.scss -->
-  <!-- a propriedade mode altera o mode de exibição -->
-  <ion-toolbar color="dark" mode="ios">
+<ion-header [translucent]="true">
+  <ion-toolbar mode="ios" color="dark">
     <ion-title>
-      {{titulo}}
+      Login
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <h1 style="text-align: center;">Produtos</h1>
-  <ion-list>
-    <ion-item-sliding *ngFor="let bolos of receitas">
+  <form [formGroup]="form" (submit)="formulario()">
+    <ion-list>
       <ion-item>
-        <ion-avatar>
-          <ion-img [src]="bolos.img"></ion-img>
-        </ion-avatar>
-        
-        <ion-label>{{bolos.titulo}} </ion-label>
-        
+        <ion-input label="Usuario" label-placement="floating" fill="solid" placeholder="Usuario" type="text" name="usuario"></ion-input>
       </ion-item>
-    </ion-item-sliding>
-  </ion-list>
 
-  <ion-fab horizontal="start" vertical="bottom">
-    <ion-fab-button routerLink='/conta'>
-      <ion-icon name="login">
-  
-      </ion-icon>
-    </ion-fab-button>
-   </ion-fab>
+      <ion-item>
+        <ion-input class="input" label="Senha" label-placement="floating" fill="solid" placeholder="Senha" type="text" name="senha"></ion-input>
+      </ion-item>
+      
+    </ion-list>
+    
+    <p style="margin-left:15px; font-size: 12px;">Não possui uma conta ainda? <a routerLink="/cadastro" >Cadastre-se</a></p>
 
- <ion-fab horizontal="end" vertical="bottom">
-  <ion-fab-button routerLink='/add-bolo'>
-    <ion-icon name="add">
+    <ion-button routerLink="/" expand="full" color="dark" shape="round" class="btn btn-primary mt-3" type="submit"> ENTRAR </ion-button>
 
-    </ion-icon>
-  </ion-fab-button>
- </ion-fab>
-
+    </form>
 </ion-content>

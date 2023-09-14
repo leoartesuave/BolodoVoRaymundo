@@ -6,23 +6,15 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
-
   {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
   },
   {
-    path: 'add-bolo',
-    loadChildren: () => import('./add-bolo/add-bolo.module').then( m => m.AddBoloPageModule)
+    path: 'cadastro',
+    loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
   },
-  {
-    path: 'conta',
-    loadChildren: () => import('./conta/conta.module').then( m => m.ContaPageModule)
-  }
-
-
-  
 ];
 
 @NgModule({

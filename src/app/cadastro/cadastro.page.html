@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar mode="ios" color="dark">
+    <ion-title>cadastro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <form [formGroup]="form" (submit)="formulario()">
+    <ion-list>
+      <ion-item>
+        <ion-input  fill="solid" placeholder="Usuario" type="text" name="usuario">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input class="input"  fill="solid" placeholder="Email" type="text" name="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input class="input"   fill="solid" placeholder="Senha" type="text" name="senha"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input class="input"  fill="solid" placeholder="Confirmar Senha" type="text" name="confirmarsenha"></ion-input>
+      </ion-item>
+      
+      <p style="margin-left:15px; font-size: 12px;">Já possui uma conta? <a routerLink="/" >Entre</a> </p>
+
+    </ion-list>
+    <br>
+    <ion-button  expand="full" color="dark" shape="round" class="btn btn-primary mt-3" type="submit"> CADASTRAR </ion-button>
+
+    </form>
+</ion-content>
